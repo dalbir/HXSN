@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html;charset=utf-8' http-equiv='content-type'>
+<meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1">
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/highcharts/highcharts.src.js"></script>
+<script src="js/highcharts/highcharts-more.js"></script>
+</head>
+
+<body>
+<!--<div id="typebuttons">-->
+
+</div>
+<input type="hidden" value="all" id="deviceType"/>
+<div id="container" style="width:480px;height:320px;margin:0 auto;border-collapse:collapse;border:none;border:solid #000 1px; margin-top: 10px"></div>
+<script type="text/javascript">
+
+var qxData = window.android.getQxData();    //获取气象数据
+qxData = eval("("+qxData+")");
+
+var chart;
+var units = {};//环境因素度量单位
+var yAxisMap = {};
+var seriesMap = {};
+var kindsList = [];
+var kindsNames = {};
+var colors = {};
+var sennors = {};
+var datas ={};
+var oldType;
+var currentkindsList = [];
+
+$(function(){
+getCheckBoxData();
+__LayoutCenterInit();
+});
+
+// 动态获取checkBox按钮
+function getCheckBoxData(){
+	var undef = null;
+//	var element=document.getElementById("typebuttons");
+	for(var i=0;i<qxData.length;i++){
+		//判断字符串不为空
+		if(qxData[i].ydesc != undef){
+//			var str = '<lable><input id='+qxData[i].type+' type="checkbox"  checked />'+qxData[i].ydesc+'</lable>';
+//			element.innerHTML=element.innerHTML + str;
+			
+			units[qxData[i].type] = qxData[i].unit;
+			kindsList.push(qxData[i].type);
+			kindsNames[qxData[i].type] = qxData[i].ydesc;
+			colors[qxData[i].type] = qxData[i].colours;
+			sennors[qxData[i].type] = {sennor_low:qxData[i].ymin, sennor_high:qxData[i].ymax};
+			datas[qxData[i].type] = qxData[i].line;
+			currentkindsList.push(qxData[i].type);
+		}
+	}
+	
+}
+
+function changeLine(serie){
+	if(currentkindsList.length!=0){
+		currentkindsList=[];
+	}
+	var str = serie.substr(0,serie.length-1);
+	var strs= new Array(); 
+	strs=str.split(",");
+	for(var i=0; i<strs.length; i++){
+		if(strs[i]==1){
+			currentkindsList.push(kindsList[i]);
+		}
+	}
+	currentShow();
+}
+
+//使用框架初始化
+function __LayoutCenterInit(layout){
+	initChartParam();
+	/*
+	//checkbox单击事件
+	$("#typebuttons").find("input").bind('click', function(){
+	if(currentkindsList.length!=0){
+	currentkindsList=[];
+	}
+	for(var i=0; i<kindsList.length; i++){
+		
+	    if(document.getElementById(kindsList[i]).checked==true){
+	    $("#deviceType").val(this.id);
+	    currentkindsList.push(kindsList[i]);
+   		alert(kindsList[i]);
+	    }
+   		}
+   		currentShow();
+     });
+     */
+	currentShow();
+	
+}
+
+function currentShow(){
+	var type = $("#deviceType").val();
+	if(type==null || type=='' || !inited){
+		return;
+	}
+	createChart(type);
+}
+
+function initChartParam(d){
+	var yAxis = [];
+	var series = [];
+	for(var i=0; i<kindsList.length; i++){
+		var kinds = kindsList[i];
+		//y轴刻度
+		var a = {
+			labels: {
+		        style: {color: colors[kinds]}
+		    },
+		    title: {text: kindsNames[kinds]+'( '+units[kinds]+' )', style: {color: colors[kinds]}, margin:0},
+		    min: sennors[kinds]['sennor_low'],
+		    max: sennors[kinds]['sennor_high'],
+		    tickInterval: getInterval(sennors[kinds]['sennor_low'], sennors[kinds]['sennor_high'])
+		};
+		if(kinds=='CO2' || kinds=='GZ'){
+			a.opposite = true;
+		}
+		yAxisMap[kinds] = [a];
+		yAxis.push(a);
+
+		//曲线数据对象
+		var s = {
+			id: kinds,
+	        name: kindsNames[kinds],
+	        type: 'spline',
+	        color: colors[kinds],
+	        yAxis: i,
+	        marker: {radius:2},
+	        data: datas[kinds]
+	    };
+		seriesMap[kinds] = [s];
+		series.push(s);
+	}
+	yAxisMap['all'] = yAxis;
+	seriesMap['all'] = series;
+	
+	inited = true;
+}
+
+
+function formatNumber(number, decimal){
+	number = ''+number;
+	if(number.indexOf('.')!=-1 && !isNaN(decimal)){
+		number = number.substring(0, number.indexOf('.')+decimal+1);
+    }
+    return parseFloat(number);
+}
+
+//创建曲线
+function createChart(type){
+	if(chart){
+		try{
+			chart.destroy();
+			chart = null;
+			$("#container").empty();
+		}catch(e){}
+	}
+	var _yAxis = [];
+	var _series = [];
+
+	
+		for(var i=0; i<currentkindsList.length; i++){
+			var k = currentkindsList[i];
+			if(!yAxisMap[k] || !yAxisMap[k].length)continue;
+			var _y = yAxisMap[k][0];
+
+			var formatter = null;
+			if(sennors[k]['sennor_high']>=1000){
+				formatter = function(){return (this.value/1000)+'k';};
+			}else{
+				formatter = function(){return this.value;};
+			}
+			_y.labels.formatter = formatter;
+			
+			if(k=='CO2' || k=='GZ'){
+				_y.opposite = true;
+			}
+			_y.min = sennors[k]['sennor_low'];
+			_y.max = sennors[k]['sennor_high'];
+			_y.tickInterval = getInterval(sennors[k]['sennor_low'], sennors[k]['sennor_high']);
+			_yAxis.push(_y);
+			var _s = seriesMap[k][0];
+			//_s.yAxis = _series.length;
+			_series.push(_s);
+		}
+	
+
+	var decimal = 1;
+	chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container'
+        },
+        credits: {enabled : false},
+        title: {text: "日平均监测曲线"},
+        xAxis: {min: 0, max: 24, tickInterval: 2},
+       // yAxis: { title: { text: ''},min: 0, max: 300,tickInterval : 40},
+        yAxis:_yAxis,    
+        tooltip: {
+        	crosshairs: true,
+            formatter: function() {
+                return this.series.name +'：'+ Highcharts.numberFormat(this.y, decimal) +' '+ units[this.series.options.id];
+            }
+        },
+        
+        legend: {
+        	align: 'center',
+            x : -50,
+            borderWidth: 0,
+            margin: 0,
+            enabled: false
+        },
+        
+        series: _series
+    });
+	oldType = type;
+	currentkindsList=[];
+}
+//获取y轴刻度
+function getInterval(min_val, max_val){
+	var v = parseInt((max_val-min_val)/10);
+	if(v==0){
+		v = 1;
+	}
+	return v;
+}
+</script>
+
+</body>
+</html>

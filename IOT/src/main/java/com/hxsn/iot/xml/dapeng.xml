@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>jddp</func>
+	<data>
+		<jd id="1" name="廊坊基地">
+			<dp id="11" name="永清大棚" img="sadas">
+				<dy id="111" crop="西红柿" name="三圣单元" img="sadas"></dy>
+				<dy id="112" crop="黄瓜" name="后裔单元" img="sadas"></dy>
+				<dy id="113" crop="茄子" name="韩村单元" img="sadas"></dy>
+			</dp>
+			<dp id="12" name="三河大棚" img="asda">
+				<dy id="121" crop="西红柿" name="三河单元" img="sadas"></dy>
+			</dp>
+			<dp id="13" name="霸州大棚" img="iuiu">
+				<dy id="133" crop="西红柿" name="霸州单元" img="sadas"></dy>
+			</dp>
+			<dp id="14" name="固安大棚" img="iuiu">
+				<dy id="143" crop="西红柿" name="固安单元" img="sadas"></dy>
+			</dp>
+		</jd>
+		<jd id="2" name="北京基地">
+			<dp id="21" name="长城大棚" img="jhjh">
+				<dy id="113" crop="西红柿" name="长城单元" img="sadas"></dy>
+			</dp>
+			<dp id="22" name="公园大棚" img="kjk">
+				<dy id="113" crop="西红柿" name="公园单元" img="sadas"></dy>
+			</dp>
+		</jd>
+	</data>
+</resp>

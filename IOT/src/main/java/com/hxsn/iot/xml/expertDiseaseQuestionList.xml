@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>wtlb</func>
+	<data>
+		<item id="111">真菌</item>
+		<item id="112">病毒</item>
+		<item id="113">生理</item>
+	</data>
+</resp>

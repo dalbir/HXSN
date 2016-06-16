@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>kzqsl</func>
+	<data>
+		<item name="补光" id="11" status="1" kind="BG">
+			<status id="110" name="开"></status>
+			<status id="111" name="关"></status>
+		</item>
+		<item name="卷帘" id="12" status="1" kind="JL">
+			<status id="120" name="开"></status>
+			<status id="121" name="停"></status>
+			<status id="122" name="关"></status>
+		</item>
+		<item name="卷膜" id="13" status="1" kind="JM">
+			<status id="130" name="开"></status>
+			<status id="131" name="停"></status>
+			<status id="132" name="关"></status>
+		</item>
+		<item name="滴灌" id="14" status="1" kind="DG">
+			<status id="140" name="开"></status>
+			<status id="141" name="关"></status>
+		</item>
+		<item name="施肥" id="15" status="1" kind="SF">
+			<status id="150" name="开"></status>
+			<status id="151" name="关"></status>
+		</item>
+		<item name="其他" id="16" status="1" kind="QT">
+			<status id="160" name="开"></status>
+			<status id="161" name="停"></status>
+			<status id="162" name="关"></status>
+		</item>
+	</data>
+</resp>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#2774cc"
+        android:gravity="center_vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+        	android:textColor="#ffffff"
+            android:text="群棚控制" />
+        
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/control_js_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#f7f7f7"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入控制密码进入控制界面"
+            android:textColor="#828282"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/control_js_pwd_ed"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_frame"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/control_js_pwd_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_modify_btn_bg"
+            android:textColor="#ffffff"
+            android:text="进入" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/sheds_control_content_layout"
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="#efeff4"
+	    android:visibility="gone"
+	    android:orientation="vertical">
+		<HorizontalScrollView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+		    <LinearLayout
+		        android:id="@+id/sheds_control_devices_layout"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:background="#ffffff"
+		        android:orientation="horizontal" >
+		    </LinearLayout>
+		</HorizontalScrollView>
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="48dp"
+	        android:background="#ffffff"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginBottom="10dp"
+	        android:gravity="center_vertical" >
+	        <TextView 
+	            android:id="@+id/sheds_control_valid_dp"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:background="#ffffff"
+	            android:textColor="#000000"
+	            android:textSize="20sp"
+	            android:text="请选择需要控制大棚"/>
+	        <ImageView
+	            android:layout_width="24dp"
+	            android:layout_height="24dp"
+	            android:background="@drawable/expert_search_arrows"/>
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/sheds_control_device_layout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+	        android:orientation="horizontal" >
+	
+	        <com.snsoft.aiot.phone.view.CustomTextView
+	            android:id="@+id/sheds_control_img"
+	            android:layout_width="80dp"
+	            android:layout_height="80dp" />
+	
+	        <LinearLayout
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="2"
+	            android:background="#ffffff"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="5dp"
+	            android:orientation="vertical" >
+	
+	            <TextView
+	                android:id="@+id/sheds_control_name"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textSize="15sp"
+	                android:textColor="#1766b8"
+	                android:text="卷帘" />
+	
+	            <TextView
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textSize="12sp"
+	                android:textColor="#747474"
+	                android:text="指定时长/秒" />
+	
+	            <EditText
+	                android:id="@+id/sheds_control_time_et"
+	                android:layout_width="match_parent"
+	                android:layout_marginRight="10dp"
+	                android:layout_height="20dp"
+	                android:textColor="#000000"
+	                android:textSize="12sp"
+	                android:background="@drawable/sheds_control_edittext_bg"
+	                android:inputType="number" >
+	
+	                <requestFocus />
+	            </EditText>
+	
+	        </LinearLayout>
+	
+	        <com.snsoft.aiot.phone.view.CustomTwoBtn
+	            android:id="@+id/sheds_control_custom_two_btn"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="3"
+	            android:visibility="gone"
+	            android:orientation="vertical" >
+	        </com.snsoft.aiot.phone.view.CustomTwoBtn>
+	        
+	        <com.snsoft.aiot.phone.view.CustomThreeBtn
+	            android:id="@+id/sheds_control_custom_three_btn"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="3"
+	            android:orientation="vertical" >
+	        </com.snsoft.aiot.phone.view.CustomThreeBtn>
+	        
+	    </LinearLayout>
+	    <ListView 
+	        android:id="@+id/sheds_control_listview"
+	        android:layout_marginTop="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:listSelector="#00000000"
+	        android:divider="#999999"
+	        android:dividerHeight="1px"
+	        android:background="#ffffff">
+	        
+	    </ListView>
+	</LinearLayout>
+</LinearLayout>

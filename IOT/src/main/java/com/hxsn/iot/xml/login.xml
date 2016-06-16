@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>login</func>
+	<data>
+	    <sessionid>00011421</sessionid>
+	    <pass></pass>
+	</data>
+</resp>

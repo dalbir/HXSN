@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>bhlb</func>
+	<data>
+		<item id="11">病害</item>
+		<item id="12">虫害</item>
+		<item id="13">技术</item>
+	</data>
+</resp>

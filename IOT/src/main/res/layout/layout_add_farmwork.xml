@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/farm_add_bg" >
+
+    <Spinner
+        android:id="@+id/growth_add_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <Button
+        android:id="@+id/growth_add_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/farm_add_btn_bg"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#ffffff"
+        android:text="添加农事" />
+    
+    <com.snsoft.aiot.phone.view.CustomEditText
+        android:id="@+id/growth_add_mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:hint="在这里添加备注"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_above="@+id/growth_add_line"
+        android:layout_below="@+id/growth_add_type"
+        android:textColor="#000000" >
+    </com.snsoft.aiot.phone.view.CustomEditText>
+    
+    <View 
+        android:id="@+id/growth_add_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/growth_add_btn"
+        android:background="#CCCCCC"/>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#2774cc"
+        android:gravity="center_vertical" >
+        
+        <Button 
+            android:id="@+id/expert_search_back_btn"
+            android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:background="@drawable/back_button"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+        	android:textColor="#ffffff"
+            android:text="专家查询" />
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" >
+        <ImageView 
+            android:id="@+id/expert_detail_img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/controll_image"/>
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView 
+                android:id="@+id/expert_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#000000"
+                android:text="XX专家"/>
+            <TextView 
+                android:id="@+id/expert_detail_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#747474"
+                android:text="xx类专家"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#d2d2d1"/>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp"
+            android:textColor="#747474"
+            android:text="专家简介" />
+
+          <TextView
+            android:id="@+id/expert_detail_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView1"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/expert_detail_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/expert_search_button_default"
+            android:textColor="#ffffff"
+            android:text="我要提问" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

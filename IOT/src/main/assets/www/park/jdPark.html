@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta content='text/html;charset=utf-8' http-equiv='content-type'>
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />
+
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script type="text/javascript">
+
+var dpList = window.android.getAllDapengData();    //获取基地大棚数据
+var serverUrl = window.android.getServerUrl();   //获得服务器地址，例如：http://192.168.12.80:8080
+dpList = eval("("+dpList+")");
+
+function toNextLevel(dpid){
+	window.android.getDapengDataBydpId(dpid);
+}
+//初始化视图
+function initview() {
+
+    var element=document.getElementById("rootDiv");
+    var empty = "";
+    for(var i=0;i<dpList.length;i++){
+   		 var str = '<div class="one"><h2><span>'+dpList[i].name+'</span></h2><ul>';
+   		for(var j=0;j<dpList[i].list.length;j++){
+   			//本地图片显示
+   			//str+='<li><a href="#"><img onclick="toNextLevel(\''+dpList[i].list[j].id+'\')" src="images/tu.jpg"><br/>'+dpList[i].list[j].name+'</a></li>';
+	   		//获取服务器图片显示
+	   		if(dpList[i].list[j].img != empty){
+	   			str+='<li><a href="#"><img onclick="toNextLevel(\''+dpList[i].list[j].id+'\')" src=\"'+serverUrl+dpList[i].list[j].img+'\"><br/>'+dpList[i].list[j].name+'</a></li>';
+	   		} else {
+	   			str+='<li><a href="#"><img onclick="toNextLevel(\''+dpList[i].list[j].id+'\')" src="images/tu.png"><br/>'+dpList[i].list[j].name+'</a></li>';
+	   		}
+   		}
+    	
+	str+='</ul></div>';
+	element.innerHTML=element.innerHTML + str;
+	}
+	
+}
+
+window.onload=function(){
+	if(dpList.length==0){
+		return;
+	}
+	initview();
+}	
+</script>
+</head>
+<body>
+<div class="web" id="rootDiv"></div>
+</body>
+</html>

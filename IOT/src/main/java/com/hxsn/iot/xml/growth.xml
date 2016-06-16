@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>syq</func>
+	<data>
+		<name>黄瓜</name>     
+		<totaldays>32</totaldays>              
+		<group>
+			<item name="育苗期" type="YMQ" value="7"></item>        //按顺序解析
+			<item name="生长期" type="SZQ" value="5"></item>
+			<item name="虫害期" type="SZQ" value="4"></item>
+			<item name="打药期" type="SZQ" value="6"></item>
+			<item name="拔苗期" type="SZQ" value="2"></item>
+			<item name="收获期" type="SZQ" value="8"></item>
+		</group>
+		<currentday>14</currentday>   
+	</data>
+</resp>

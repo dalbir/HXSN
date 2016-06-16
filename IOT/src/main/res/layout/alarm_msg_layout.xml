@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout
+	    android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#2774cc"
+        android:gravity="center_vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+        	android:textColor="#ffffff"
+            android:text="报警信息" />
+        
+    </RelativeLayout>
+    
+    <TabHost android:id="@+id/tabhost" android:layout_width="fill_parent" android:layout_height="match_parent">  
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">  
+            <!-- TabWidget的id属性必须为 @android:id/tabs-->              
+            <TabWidget android:id="@android:id/tabs" android:orientation="horizontal" android:layout_width="fill_parent"   android:background="#efeff4"
+              android:layout_height="wrap_content" />  
+            <!-- FrameLayout的id属性必须为 @android:id/tabcontent-->  
+             <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:background="#efeff4">  
+                 <LinearLayout 
+                     android:id="@+id/lv_alarm_list_all_linear"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
+                     <com.snsoft.aiot.phone.view.SwipeListView 
+					    android:id="@+id/lv_alarm_list_all"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:cacheColorHint="#00000000"
+						android:listSelector="#00000000"
+						android:divider="#dddbdb"
+					    android:dividerHeight="1dp"
+					 />
+                     <View 
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:background="#dddbdb"/>
+                     <TextView 
+                         android:id="@+id/lv_alarm_list_all_empty_tv"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:textColor="#000000"
+                         android:text="当前数据为空"
+                         android:visibility="gone"
+                         android:gravity="center"/>
+                 </LinearLayout>
+                 
+                 <LinearLayout 
+                     android:id="@+id/lv_alarm_list_all_already_linear"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
+                     <com.snsoft.aiot.phone.view.SwipeListView 
+					    android:id="@+id/lv_alarm_list_all_already"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:cacheColorHint="#00000000"
+						android:listSelector="#00000000"
+						android:divider="#dddbdb"
+					    android:dividerHeight="1dp"
+					 />
+                     <View 
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:background="#dddbdb"/>
+                     <TextView 
+                         android:id="@+id/lv_alarm_list_all_already_tv"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:textColor="#000000"
+                         android:text="当前数据为空"
+                         android:visibility="gone"
+                         android:gravity="center"/>
+                 </LinearLayout>
+                 
+                 <LinearLayout 
+                     android:id="@+id/lv_alarm_list_all_today_linear"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="vertical">
+                     <com.snsoft.aiot.phone.view.SwipeListView 
+					    android:id="@+id/lv_alarm_list_all_today"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:cacheColorHint="#00000000"
+						android:listSelector="#00000000"
+						android:divider="#dddbdb"
+					    android:dividerHeight="1dp"
+					 />
+                     <View 
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"
+                         android:background="#dddbdb"/>
+                     <TextView 
+                         android:id="@+id/lv_alarm_list_all_today_tv"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:textColor="#000000"
+                         android:text="当前数据为空"
+                         android:visibility="gone"
+                         android:gravity="center"/>
+                 </LinearLayout>
+                
+             </FrameLayout>  
+         </LinearLayout>  
+    </TabHost>  
+
+</LinearLayout>

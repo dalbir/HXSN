@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>dpspmk</func>
+	<data>	
+		<ip>192.168.11.214</ip>
+		<port>8000</port>
+		<user>admin</user>
+		<password>12345</password>
+		<channel>
+			<item note="单元一">1</item>
+			<item note="单元二">2</item>
+			<item note="单元三">3</item>
+		</channel>
+	</data>
+</resp>

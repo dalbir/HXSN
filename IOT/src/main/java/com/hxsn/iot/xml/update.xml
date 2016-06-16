@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>1</code>
+	<func>bbgx</func>
+	<data>
+		<url>http://192.168.12.15/sn-aiot-1.1/mobile/sn-aiot-phone-1.0.apk</url>
+	</data>
+</resp>

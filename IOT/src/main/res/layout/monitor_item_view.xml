@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#1a7cc8" >
+
+        <Button
+            android:id="@+id/monitor_refresh_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/refresh_button" />
+
+        <TextView
+            android:id="@+id/monitor_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/monitor_refresh_btn"
+            android:layout_alignBottom="@+id/monitor_refresh_btn"
+            android:layout_centerInParent="true"
+            android:textSize="15sp"
+            android:textColor="#ffffff"
+            android:text="TextView" />
+
+        <Button
+            android:id="@+id/monitor_add_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/add_button"/>
+
+    </RelativeLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="@drawable/jiance_kuang"
+        android:orientation="horizontal">
+        
+	    <HorizontalScrollView 
+	        android:id="@+id/monitor_horizontal_scrollview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fillViewport="true"
+	        android:layout_centerVertical="true"
+	        android:paddingRight="24dp"
+	        android:paddingLeft="24dp"
+	        android:scrollbarAlwaysDrawHorizontalTrack="false">
+	        <LinearLayout 
+	            android:id="@+id/monitor_content_layout"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	        </LinearLayout>
+	    </HorizontalScrollView>
+	    
+	    <Button 
+            android:id="@+id/monitor_content_left_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+            android:background="@drawable/monitor_left_btn"/>
+
+	    <Button
+	        android:id="@+id/monitor_content_right_btn"
+	        android:layout_width="24dp"
+	        android:layout_height="24dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/monitor_right_btn" />
+
+	</RelativeLayout>
+</LinearLayout>

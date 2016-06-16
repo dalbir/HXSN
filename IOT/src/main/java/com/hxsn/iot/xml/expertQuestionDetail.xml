@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>wtxxlb</func>
+	<data>
+		<name>黄瓜叶病</name>
+		<content>黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？
+		    黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？黄瓜叶片大片大片脱落，导致黄瓜快死了，怎么办？</content>
+		<image name="">
+			<item url="http://..01.jpg"></item>
+			<item url="http://..02.jpg"></item>
+		</image>
+		<group name="">
+			<item name="王老师" type="果蔬类专家" img="http://..02.jpg" time="05-29">建议你把黄瓜苗拔了得了</item>
+			<item name="李老师" type="果蔬类专家" img="http://..02.jpg" time="05-20">建议你不要把苗拔了</item>
+			<item name="赵老师" type="果蔬类专家" img="http://..02.jpg" time="05-29">建议你把黄瓜苗拔了得了</item>
+			<item name="孙老师" type="果蔬类专家" img="http://..02.jpg" time="05-20">建议你不要把苗拔了</item>
+			<item name="杨老师" type="果蔬类专家" img="http://..02.jpg" time="05-29">建议你把黄瓜苗拔了得了</item>
+			<item name="郭老师" type="果蔬类专家" img="http://..02.jpg" time="05-20">建议你不要把苗拔了</item>
+		</group>
+	</data>
+</resp>

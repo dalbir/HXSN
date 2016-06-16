@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:orientation="vertical" >
+	
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="vertical"
+        android:background="#2774cc"
+        android:gravity="center_vertical" >
+        
+        <Button 
+            android:id="@+id/expert_askq_back_btn"
+            android:layout_width="48dp"
+	        android:layout_height="48dp"
+	        android:background="@drawable/back_button"/>
+
+        <Button
+            android:id="@+id/expert_askq_submit"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/submit_button" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+        	android:textColor="#ffffff"
+            android:text="我的提问" />
+        
+    </RelativeLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+    
+	    <EditText
+	        android:id="@+id/expert_askq_title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:hint="  标题"
+	        android:textColor="#000000"
+	        android:background="@drawable/expert_askq_et_bg"
+	        android:ems="10" >
+	
+	        <requestFocus />
+	    </EditText>
+	
+	    <com.snsoft.aiot.phone.view.CustomEditText
+	        android:id="@+id/expert_askq_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="1"
+	        android:layout_marginTop="10dp"
+	        android:background="@drawable/expert_askq_et_bg"
+	        android:hint="  内容....."
+	        android:textColor="#000000" >
+	    </com.snsoft.aiot.phone.view.CustomEditText>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="60dp"
+	        android:layout_marginLeft="5dp"
+	        android:layout_marginRight="5dp"
+	        android:layout_marginBottom="10dp"
+	        android:background="@drawable/expert_ask_img_bg"
+	        android:gravity="center_vertical" >
+	        <LinearLayout 
+	            android:id="@+id/expert_askq_imagegroup"
+	            android:layout_width="wrap_content"
+	            android:layout_height="48dp"
+	            android:gravity="center_vertical"
+	            android:orientation="horizontal">
+	        </LinearLayout>
+	        <Button 
+	            android:id="@+id/expert_askq_addimage"
+	            android:layout_width="48dp"
+	            android:layout_height="48dp"
+	            android:layout_marginLeft="10dp"
+	            android:background="@drawable/expert_askq_addimg_btn"/>
+	    </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

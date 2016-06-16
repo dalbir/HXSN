@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+	<ImageView 
+	    android:id="@+id/expert_search_item_img"
+	    android:layout_width="48dp"
+	    android:layout_height="48dp"
+	    android:layout_marginTop="10dp"
+    	android:layout_marginBottom="10dp"
+	    android:background="@drawable/controll_image"/>
+	
+	<LinearLayout 
+	    android:layout_width="0dp"
+	    android:layout_weight="1"
+	    android:layout_height="match_parent"
+	    android:layout_marginTop="10dp"
+    	android:layout_marginBottom="10dp"
+    	android:layout_marginLeft="7dp"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:id="@+id/expert_search_item_name"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="20sp"
+	        android:textColor="#000000"
+	        android:text="X老师"/>
+	    <TextView 
+	        android:id="@+id/expert_search_item_type"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textSize="18sp"
+	        android:textColor="#747474"
+	        android:text="XX类专家"/>
+	</LinearLayout>
+	
+	<ImageView 
+	    android:layout_width="24dp"
+	    android:layout_height="24dp"
+    	android:layout_gravity="center_vertical"
+	    android:background="@drawable/expert_search_arrows"/>
+</LinearLayout>

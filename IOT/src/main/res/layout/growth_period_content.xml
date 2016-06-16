@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7" >
+    
+	<com.snsoft.aiot.phone.view.GrowthPeriodView 
+	    android:id="@+id/growth_content_view"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	    
+	</com.snsoft.aiot.phone.view.GrowthPeriodView>
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/growth_content_view"
+	    android:layout_above="@+id/growth_content_addbtn"
+	    android:layout_marginLeft="6dp"
+	    android:layout_marginRight="6dp"
+	    android:background="@drawable/farm_list_bg_up"
+	    android:orientation="vertical">
+	    <ListView 
+	        android:id="@+id/growth_content_listview"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:divider="#CCCCCC"
+	        android:dividerHeight="1dp">
+	    </ListView>
+	    
+	</LinearLayout>
+	
+	<ImageButton 
+	    android:id="@+id/growth_content_addbtn"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginLeft="6dp"
+	    android:layout_marginRight="6dp"
+	    android:background="@drawable/farm_list_bg_blow"
+	    android:layout_alignParentBottom="true"
+	    android:src="@drawable/farm_add_btn"/>
+
+</RelativeLayout>

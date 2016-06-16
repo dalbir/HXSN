@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, LoginActivity!</string>
+    <string name="app_name">庄络物联网</string>
+    <string name="deleteall">全部删除</string>
+    <string name="tab01_text01">园区</string>
+    <string name="tab01_text02">警示</string>
+    <string name="tab01_text03">专家</string>
+    <string name="tab01_text04">更多</string>
+    
+    <string-array name="menu01_text">
+        <item>群棚控制</item>
+        <item>系统设置</item>
+    </string-array>
+    
+    <string name="tab02_text01">监测</string>
+    <string name="tab02_text02">控制</string>
+    <string name="tab02_text03">农事</string>
+    <string name="tab02_text04">更多</string>
+    
+    <string-array name="menu02_text">
+        <item>今日曲线</item>
+        <item>报警信息</item>
+        <item>视频监控</item>
+    </string-array>
+
+    <string name="server_unusual_msg">服务器异常，请联系管理人员</string>
+    
+    <string name="update_software_title">软件升级</string>
+    <string name="update_software_message">发现新版本,建议立即更新使用.</string>
+    <string name="update_software_positive">更新</string>
+    <string name="update_software_negative">取消</string>
+	<string name="update_download_success">下载成功，点击安装</string>
+	<string name="update_download_fail">下载失败</string>
+	<string name="updating">更新中</string>
+	<string name="downloading">正在下载</string>
+	
+	<!-- device -->
+	<string name="device_co">二氧化碳</string>
+	<string name="device_jl">卷帘</string>
+	<string name="device_jm">卷膜</string>
+	<string name="device_up">开启</string>
+	<string name="device_down">关闭</string>
+	<string name="device_stop">停止</string>
+	<string name="device_dialog_title">输入密码</string>
+	<string name="device_dialog_mess">请输入您的设备密码</string>
+	<string name="device_work_stop">设备未工作</string>
+	<string name="device_work_jl_up">上卷帘工作中...</string>
+	<string name="device_work_jl_down">下卷帘工作中...</string>
+	<string name="device_work_begin">设备工作中...</string>
+	
+	<string name="nonetwork">检查到没有可用的网络连接,请打开网络连接</string>
+	<string name="confirm">确定</string>
+	
+	<string name="address_error">地址错误，请修改地址后重试</string>
+    
+    <string name="main_004">报警信息</string>
+    <string name="connection_server_error">服务器读取信息异常，请稍后再试</string>
+    
+    <string name="main_002">变化曲线</string>
+	<string name="cancel">取消</string>
+    
+    <string name="userName">用户名:</string>
+    <string name="pwd">&#160;&#160;&#160;密&#160;&#160;&#160;&#160;码:</string>
+    <string name="login">登录</string>
+    <string name="pwd_hint">请输入密码&#160;&#160;</string>
+    <string name="username_hint">请输入用户名</string>
+    <string name="errotDisplay">用户名或密码错误</string>
+    <string name="nullDisplay">用户名或密码不能为空</string>
+    <string name="confirmPWd">确认密码</string>
+    <string name="again_pwd">请再次输入密码</string>
+    <string name="expert_question">我的提问</string>
+    <string name="OnlineConsultation">在线咨询</string>
+    <string name="expertinquiry">专家查询</string>
+    <string name="diseasequery">病害查询</string>
+    
+    <!-- 刘志远增加 -->
+    <string name="pull_to_refresh">下拉可以刷新</string>
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <!-- 消除警告，可忽略 -->
+    <string name="d">图片描述</string>
+    <string name="about_us">关于物联网</string>
+    <string name="ctrl_pwd_hint">请输入控制密码</string>
+
+</resources>

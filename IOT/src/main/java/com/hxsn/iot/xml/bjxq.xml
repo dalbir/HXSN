@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>bjxq</func>
+	<data>
+		<time>1398756583668</time>
+		<jdname>马家务基地</jdname>
+		<dpname>大棚1号</dpname>
+		<content>温度过高，需要通风</content>
+		<level>5</level>
+		<title>监测节点异常报警大棚</title>
+		<receiver>张三</receiver>
+		<receivePhone>15865325654</receivePhone>
+	</data>
+</resp>

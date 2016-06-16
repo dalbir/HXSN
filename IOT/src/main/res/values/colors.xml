@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">#ffffffff</color>
+    
+	<color name="bottom_text_color">#0068b7</color>
+	<color name="bottom_text_color_default">#464646</color>
+	<color name="blur_bg">#FFFAF0</color>
+    <color name="black">#000000</color>
+    <color name="grey">#808080</color>
+    <color name="right_bg">#696969</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue_default">#2774cc</color>
+    <color name="blue_press">#3b8ede</color>
+    <color name="listview_divider">#dfdfdd</color>
+    <color name="alarm_del_bg">#ff3b30</color>
+    <color name="weatherpost_blue">#00a0e9</color>
+    <color name="bottom_background">#d2d2d2</color>
+    <color name="tab_textcolor">#33b5e5</color>
+    <color name="monitor_compare_title">#2774cc</color>
+    <color name="alarm_dpname_bg">#898e91</color>
+    <color name="alarm_dpname_warning_bg">#faaa17</color>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExpandableListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:childDivider="#837484"
+    android:divider="#837484"
+    android:dividerHeight="1dp"
+    android:background="#f7f7f7">
+</ExpandableListView>

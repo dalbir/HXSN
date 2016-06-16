@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>zbtjlb</func>
+	<data>
+		<group name="活动">
+			<item id="11" name="农家乐"></item>
+			<item id="12" name="采摘"></item>
+			<item id="13" name="钓鱼"></item>
+			<item id="14" name="休闲"></item>
+			<item id="15" name="劳动体验"></item>
+		</group>
+		<group name="价格">
+			<item id="21" name="150以下"></item>
+			<item id="22" name="300元-600元"></item>
+			<item id="23" name="600元以上"></item>
+		</group>
+		<group name="设施">
+			<item id="31" name="厕所"></item>
+			<item id="32" name="电线杆"></item>
+			<item id="33" name="影厅"></item>
+		</group>
+		<group name="周边">
+			<item id="41" name="景点"></item>
+			<item id="42" name="商场"></item>
+			<item id="43" name="宾馆"></item>
+			<item id="44" name="加油站"></item>
+			<item id="41" name="餐馆"></item>
+		</group>
+	</data>
+</resp>

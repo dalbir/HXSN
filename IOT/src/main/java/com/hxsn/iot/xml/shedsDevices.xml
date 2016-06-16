@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>qpsblb</func>
+	<data>
+		<item kind="JL" name="卷帘">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+			<status id="0" name="停"></status>
+		</item>
+		<item kind="BG" name="补光">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+		</item>
+		<item kind="JM" name="卷膜">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+			<status id="0" name="停"></status>
+		</item>
+		<item kind="DG" name="滴管">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+		</item>
+		<item kind="SF" name="施肥">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+		</item>
+		<item kind="QT" name="其他">
+			<status id="1" name="开"></status>
+			<status id="2" name="关"></status>
+			<status id="0" name="停"></status>
+		</item>
+	</data>
+</resp>

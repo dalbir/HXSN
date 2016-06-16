@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48.0dip"
+    android:background="#2774cc"
+    android:orientation="horizontal" >
+
+    <Button android:id="@+id/btn_topbar_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/back_button"/>
+    <TextView android:id="@+id/text_topbar_title"
+        android:layout_width="0.0dip"
+        android:layout_height="48.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:text="标题"/>
+    <Button android:id="@+id/btn_topbar_menu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/menu_button"/>
+
+</LinearLayout>

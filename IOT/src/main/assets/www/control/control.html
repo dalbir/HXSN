@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=no,maximum-scale=1.0,initial-scale=1.0" />
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script>
+
+var ctrls = {};
+
+$(function(){
+	var xml =$(window.android.getControlDevice()), devs = [];
+	var items = xml.find("item");
+	
+	if(items!=null && items.size()>0){
+		items.each(function(){
+			var itm = $(this), dev = {};
+			dev.id = itm.attr('id');
+			dev.name = itm.attr('name');
+			dev.status = itm.attr('status');
+			dev.kind = itm.attr('kind');
+			dev.statuses = [];
+			itm.find("status").each(function(){
+				var s = $(this), statusObj = {};
+				statusObj.id = s.attr("id");
+				statusObj.name = s.attr("name");
+				statusObj.oper = s.attr("oper");
+				statusObj.stop = s.attr("stop");
+				
+				dev.statuses.push(statusObj);
+			});
+			devs.push(dev);
+		});
+	}
+	
+	//创建控制器
+	jQuery.each(devs, function(i, dev){
+		ctrls[dev.id] = new Control(dev, i);
+	});
+	
+	
+	//刷新状态
+	/*
+	devs[2].status = 'KM';
+	jQuery.each(devs, function(i, dev){
+		if(ctrls[dev.id]){
+			ctrls[dev.id].setStatus(dev.status);
+		}
+	});
+	*/
+});
+
+
+
+
+
+
+function Control(dev, index){
+	var $ = jQuery, c=this, container = $('#testDiv');
+	//初始化
+	c._init = function(){
+		c.dev=dev;
+		c.index=index;
+		c.statusid = dev.status;
+		c.statusMap = {};
+		c.con = $('<div><div class="web"><div class="one"></div></div></div>');
+		var conInner = $('.one', c.con);
+		var dl = $('<dl></dl>');
+		var dt = $('<dt></dt>');
+		var img = $('<img />');
+		img.error(function(){
+			$(this).attr('src', 'images/kongzhi_default.png');
+		});
+		dt.append(img).append('<span>'+dev.name+'</span>');
+		dl.append(dt).append('<dd><span class="tou">'+dev.name+'</span><b></b><br/><span>指定时长/秒</span><br/><input type="text"/></dd>');
+		img.attr('src', 'images/'+dev.kind.toLowerCase()+'.png');
+		c.msgPane = $('b', dl);
+		c.timeInput = $('input', dl);
+		
+		conInner.append(dl);
+		if(dev.statuses.length==3){
+			var ul = $('<ul class="button_3"></ul>');
+			for(var i=0; i<3; i++){
+				var statusObj = dev.statuses[i];
+				c.statusMap[statusObj.id] = statusObj;
+				var li = $('<li class="btn '+statusObj.id+'">'+statusObj.oper+'</li>');
+				li.data('scfg', statusObj);
+				if(statusObj.id === dev.status){
+					li.addClass('select');
+				}
+				if(!!statusObj.stop){
+					c.stopBtn = li;
+				}
+				ul.append(li);
+			}
+			conInner.append(ul);
+		}else{
+			var ul = $('<ul class="button_3"></ul>');
+			ul.append('<li class="btn" style="visibility:hidden">&nbsp;</li>');
+			for(var i=0; i<2; i++){
+				var statusObj = dev.statuses[i];
+				c.statusMap[statusObj.id] = statusObj;
+				var li = $('<li class="btn '+statusObj.id+'">'+statusObj.oper+'</li>');
+				li.data('scfg', statusObj);
+				if(statusObj.id === dev.status){
+					li.addClass('select');
+				}
+				if(!!statusObj.stop){
+					c.stopBtn = li;
+				}
+				ul.append(li);
+			}
+			conInner.append(ul);
+		}
+		container.append(c.con);
+		
+		c.btns = $('.btn', conInner);
+		c.btns.bind('click', function(){
+			var btn = $(this);
+			c.devicesControl(btn);
+		});
+		
+	};
+	
+	c.devicesControl=function(btn){
+		var deviceid = c.dev.id;
+		var statusObj = btn.data('scfg');
+		var statusid = statusObj.id;
+		var timing = c.timeInput.val();
+		var timingUnit = 's';
+		var code = window.android.getDeviceControl(deviceid, statusid, timing, timingUnit);
+		return ;
+		//$('#msg').html('deviceid='+deviceid+'&statusid='+statusid+'&timing='+timing+'&timingUnit='+timingUnit);
+		if(code != "200"){
+			//alert("错误");
+			//c.msgPane.removeClass('green red').addClass('red').html('(错误)');
+		} else {
+			//c.msgPane.removeClass('green red').addClass('green').html('(控制成功)');
+			
+			c.btns.removeClass('select');
+			btn.addClass('select');
+			c.statusid = statusObj.id;
+			
+			if(c.timerid){
+				window.clearInterval(c.timerid);
+				c.btns.each(function(){
+					$(this).html($(this).data('scfg').oper);
+				});
+			}
+			if(!!statusObj.stop){
+				return;
+			}
+			timing = parseInt(timing);
+			if(timing && timing>0){
+				c._curBtn = btn;
+				c._timing = timing;
+				c._startTime = (new Date()).getTime();
+				c._timer();
+				c.timerid = window.setInterval(function(){c._timer();}, 1000);
+			}
+		}
+	};
+	
+	c._timer = function(){
+		var t = parseInt(((new Date()).getTime()-c._startTime)/1000);
+		if(c._timing > t){
+			c._curBtn.html(''+(c._timing - t));
+		}else{
+			window.clearInterval(c.timerid);
+			c._curBtn.html(c._curBtn.data('scfg').oper);
+			
+			c.btns.removeClass('select');
+			c.stopBtn.addClass('select');
+			c.btns.each(function(){
+				$(this).html($(this).data('scfg').oper);
+			});
+		}
+	};
+	
+	c.setStatus = function(statusid){
+		if(!c.statusMap[statusid])return;
+		if(c.statusid === statusid)return;
+		var statusObj = c.statusMap[statusid];
+		var btn = c.btns.filter('.'+statusid);
+		
+		c.btns.removeClass('select');
+		btn.addClass('select');
+		c.statusid = statusid;
+		
+		if(c.timerid){
+			window.clearTimeout(c.timerid);
+			c.btns.each(function(){
+				$(this).html($(this).data('scfg').oper);
+			});
+		}
+	};
+	
+	c._init();
+}
+
+</script>
+</head>
+<body>
+
+<div id="testDiv"></div>
+
+<div id="msg"></div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FarmManage/FarmManage.iml" filepath="$PROJECT_DIR$/FarmManage/FarmManage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HandFarm/HandFarm.iml" filepath="$PROJECT_DIR$/HandFarm/HandFarm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IOT/IOT.iml" filepath="$PROJECT_DIR$/IOT/IOT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hxsn.iml" filepath="$PROJECT_DIR$/hxsn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/intelliwork/intelliwork.iml" filepath="$PROJECT_DIR$/intelliwork/intelliwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sn-ssk-v0.1/sn-ssk-v0.1.iml" filepath="$PROJECT_DIR$/sn-ssk-v0.1/sn-ssk-v0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/town/town.iml" filepath="$PROJECT_DIR$/town/town.iml" />
+    </modules>
+  </component>
+</project>

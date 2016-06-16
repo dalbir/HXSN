@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/control_js_pwd_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#f7f7f7"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入控制密码进入控制界面"
+            android:textColor="#828282"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/control_js_pwd_ed"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:background="@drawable/edit_frame"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/control_js_pwd_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/settings_modify_btn_bg"
+            android:textColor="#ffffff"
+            android:text="进入" />
+    </LinearLayout>
+    
+    <!-- 气象哨 -->
+    <RelativeLayout 
+        android:id="@+id/weather_post"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/tu">
+        
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentLeft="true"
+	        android:layout_margin="10dp"
+	        android:orientation="vertical" >
+	
+	        <TextView
+	            android:id="@+id/weather_post_jdname"
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:layout_gravity="left"
+	            android:textColor="#ffffff"
+	            android:background="#00a0e9"
+	            android:textSize="20sp"
+	            android:gravity="center_vertical"
+	            android:text="TextView" />
+			<HorizontalScrollView 
+			    android:layout_width="match_parent"
+			    android:layout_height="0dp"
+			    android:layout_weight="1"
+			    android:scrollbars="none"
+			    android:layout_marginTop="5dp">
+		        <LinearLayout
+		            android:id="@+id/weather_post_monitor"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:background="#ffffff"
+		            android:orientation="horizontal" >
+		        </LinearLayout>
+			</HorizontalScrollView>
+	        <TextView
+	            android:id="@+id/weather_post_dpname"
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:background="@android:color/darker_gray"
+	            android:textSize="20sp"
+	            android:layout_marginTop="5dp"
+	            android:textColor="#ffffff"
+	            android:gravity="center_vertical"
+	            android:text="TextView" />
+	        
+	        <TextView 
+	            android:id="@+id/weather_post_growth_name"
+	            android:layout_width="wrap_content"
+	            android:layout_height="0dp"
+	            android:layout_weight="1"
+	            android:background="#f39800"
+	            android:layout_marginTop="5dp"
+	            android:gravity="center_vertical"
+	            android:textSize="20sp"
+	            android:textColor="#ffffff"/>
+
+    	</LinearLayout>
+        
+    </RelativeLayout>
+    
+    <!-- 主界面 -->
+    
+    <android.support.v4.view.ViewPager
+       android:id="@+id/viewpager"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+       android:visibility="gone"
+       android:layout_below="@+id/weather_post" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"
+        android:layout_alignBottom="@+id/weather_post"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</RelativeLayout>

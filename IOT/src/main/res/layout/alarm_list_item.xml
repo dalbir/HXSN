@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal" 
+    >
+
+    <RelativeLayout android:id="@+id/layout_alarm_itme01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" 
+        >
+        <ImageView android:id="@+id/iv_alarm_itme_level"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:background="@drawable/alarm_normal"/>
+        <TextView android:id="@+id/tv_alarm_item_title"
+            android:layout_width="200.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@id/iv_alarm_itme_level"
+            android:singleLine="true"
+            android:text="大棚高温预警"
+        	android:textSize="18.0sp"
+        	android:textColor="#000000"/>
+        <TextView android:id="@+id/tv_alarm_item_dp"
+            android:layout_width="70.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:layout_alignLeft="@id/tv_alarm_item_title"
+            android:layout_below="@id/tv_alarm_item_title"
+            android:text="三五三四一号大棚"
+            android:singleLine="true"
+            android:textSize="15.0sp"
+            android:background="#faaa17"
+            android:gravity="center"
+            android:textColor="#ffffff"/>
+        <TextView android:id="@+id/tv_alarm_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_alignTop="@id/tv_alarm_item_dp"
+            android:layout_toRightOf="@id/tv_alarm_item_dp"
+            android:text="2013-3-25 8:38"
+            android:textSize="13.0sp"
+            android:textColor="#6A6A6A"/>
+
+        <TextView
+            android:id="@+id/tv_alarm_item_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_alarm_item_dp"
+            android:layout_alignBottom="@+id/tv_alarm_item_dp"
+            android:layout_toRightOf="@+id/tv_alarm_item_time"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="#000000"
+            android:text="已读" />
+    
+    </RelativeLayout>
+	
+    <RelativeLayout
+        android:id="@+id/item_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/alarm_del_bg" >
+
+        <TextView
+            android:id="@+id/item_right_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/del_icon_normal"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/blur_bg" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/monitor_more_compare_bg"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:gravity="center_vertical"
+	        android:textSize="18sp"
+	        android:textColor="#0066FF"
+	        android:text="多棚比较"/>
+
+	    <Button
+	        android:id="@+id/monitor_value_btn_sure"
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentTop="true"
+	        android:background="@drawable/monitor_more_compare_close"
+	        android:textSize="10sp"
+	        android:text="关闭" />
+	   
+    </RelativeLayout>
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="#0066FF"/>
+	<HorizontalScrollView 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:fillViewport="true">
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical">
+		    <LinearLayout
+		        android:id="@+id/monitor_value_tital"
+		        android:layout_width="match_parent"
+		        android:layout_height="40dp"
+		        android:gravity="center_vertical"
+		        android:orientation="horizontal" >
+		    </LinearLayout>
+			<View 
+			    android:layout_width="match_parent"
+			    android:layout_height="1px"
+			    android:background="#c3c3c3"/>
+		    <ListView
+		        android:id="@+id/monitor_value_listview"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content" >
+		    </ListView>
+	    </LinearLayout>
+	</HorizontalScrollView>
+</LinearLayout>

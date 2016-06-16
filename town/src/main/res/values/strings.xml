@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">乡往</string>
+    
+    <!-- 周边页 -->
+    <string name="circum_search_title">周边信息</string>
+    <string name="circum_search_button_text">条件搜索</string>
+
+</resources>

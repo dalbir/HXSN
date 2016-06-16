@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>jcsj</func>
+	<data>
+		<time>2014-01-22</time>
+		<growth>西红柿</growth>
+		<group name="">
+			<item name="光照" type="GZ" value="1200" unit="lux"></item>
+			<item name="气温" type="QW" value="40" unit="℃"></item>
+			<item name="CO2浓度" type="CO2" value="300" unit="ppm"></item>
+			<item name="土湿" type="TS" value="200" unit="%"></item>
+			<item name="风向" type="FX" value="北风" unit=""></item>
+			<item name="风速" type="FS" value="400" unit="m/s"></item>
+			<item name="气湿" type="QS" value="70" unit="%"></item>
+		</group>
+	</data>
+</resp>

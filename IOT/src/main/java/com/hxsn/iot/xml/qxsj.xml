@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>qxcsh</func>
+	<data>
+	    <time>1410753220000</time>
+	    <growth>黄瓜</growth>
+		<qx type="QW">
+			<ymax>70</ymax>
+			<ymin>-10</ymin>
+			<colours>#f00</colours>
+			<interval>5</interval>
+			<ydesc>空气温度</ydesc>
+			<unit>℃</unit>
+			<line>10.69;10.46;10.16;9.97;9.72;9.49;9.29;9.15;9.09;9.38;12.2;16.77;23.87;25.8;18.69;14.82;16.43;12.89;11.24;9.57;8.72;8.46;8.2;7.97;7.85</line>
+		</qx>
+		<qx type="QS">
+			<ymax>100</ymax>
+			<ymin>0</ymin>
+			<interval>5</interval>
+			<ydesc>空气湿度</ydesc>
+			<colours>#0f0</colours>
+			<unit>%</unit>
+			<line>3;10.9;20.3;24.4;25.3;30.5;35.7;36.1;37.4;38.0;40.8;34.8;32.7;33.3;50.4;21.4;32.9;36.1;39.9;42.2;54.4;65.8;45.9;54.2;24.4</line>
+		</qx>
+		<qx type="TS">
+			<ymax>100</ymax>
+			<ymin>0</ymin>
+			<interval>5</interval>
+			<ydesc>土壤湿度</ydesc>
+			<colours>#0080FF</colours>
+			<unit>%</unit>
+			<line>6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.3;6.4;6.4;6.4;6.4;6.4;6.2;6.2;6.2;6.2;6.2;6.2;6.2;6.2</line>
+		</qx>
+		
+		<qx type="GZ">
+			<ymax>20000</ymax>
+			<ymin>0</ymin>
+			<interval>50</interval>
+			<ydesc>光照</ydesc>
+			<colours>#f0f</colours>
+			<unit>Lx</unit>
+			<line>50.0;20.0;30.0;40.0;0.0;0.0;0.0;0.0;0.0;50;50;500;50;50;50;50;50;2;0.0;0.0;0.0;0.0;0.0;0.0;0.0</line>
+		</qx>
+		
+		<qx type="CO2">
+			<ymax>1000</ymax>
+			<ymin>0</ymin>
+			<interval>50</interval>
+			<ydesc>CO2</ydesc>
+			<colours>#000000</colours>
+			<unit>ppm</unit>
+			<line>34.6;34.7;34.6;34.2;34.0;34.2;35.2;35.7;35.6;35.4;31.6;56.4;70.3;56.2;55.4;55.6;55.3;55.9;55.4;55;77.5;77.7;77.9;77.4;77.4</line>
+		</qx>
+	</data>
+</resp>

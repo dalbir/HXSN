@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>xxts</func>
+	<data>
+	    <title>标题</title>
+		<about>简介简介。。。。。</about>
+		<url>http://www.baidu.com</url>
+	</data>
+</resp>

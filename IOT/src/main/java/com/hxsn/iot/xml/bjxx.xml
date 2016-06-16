@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>bjxx</func>
+	<data count="1000">
+		<item alarm_msgid="111" alarm_time="1398756583668" alarm_level="5" alarm_title="监测节点异常报警大棚" jd_name="马家务基地" dp_name="永清大棚" dpid="11" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="112" alarm_time="1398756583668" alarm_level="4" alarm_title="监测节点异常报警大棚" jd_name="测试基地" dp_name="三河大棚" dpid="12" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="113" alarm_time="1398756583668" alarm_level="6" alarm_title="监测节点异常报警大棚" jd_name="test" dp_name="霸州大棚" dpid="13" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="114" alarm_time="1398756583668" alarm_level="5" alarm_title="监测节点异常报警大棚" jd_name="马家务基地" dp_name="永清大棚" dpid="11" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="115" alarm_time="1398756583668" alarm_level="4" alarm_title="监测节点异常报警大棚" jd_name="测试基地" dp_name="三河大棚" dpid="12" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="116" alarm_time="1398756583668" alarm_level="6" alarm_title="监测节点异常报警大棚" jd_name="test" dp_name="霸州大棚" dpid="13" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="117" alarm_time="1398756583668" alarm_level="5" alarm_title="监测节点异常报警大棚" jd_name="马家务基地" dp_name="永清大棚" dpid="11" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="118" alarm_time="1398756583668" alarm_level="4" alarm_title="监测节点异常报警大棚" jd_name="测试基地" dp_name="三河大棚" dpid="12" alarm_timemark="2014-05-04">bjtext</item>
+		<item alarm_msgid="119" alarm_time="1398756583668" alarm_level="6" alarm_title="监测节点异常报警大棚" jd_name="test" dp_name="霸州大棚" dpid="13" alarm_timemark="2014-05-04">bjtext</item>
+	</data>
+</resp>

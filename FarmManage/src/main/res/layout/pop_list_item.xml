@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/sxtlistIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/sx" />
+
+    <TextView
+        android:id="@+id/pop_list_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         android:paddingLeft="5dp" 
+        android:layout_toRightOf="@+id/sxtlistIV"
+        android:gravity="center_vertical"
+        android:text="ss"
+        android:background="@color/transparent"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+    <TextView 
+         android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/pop_list_text"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/spfg"
+        />
+    
+</RelativeLayout>

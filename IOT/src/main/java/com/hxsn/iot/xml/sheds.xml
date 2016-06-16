@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>jddp</func>
+	<data>
+		<jd id="1" name="廊坊基地">
+			<dp id="11" name="永清大棚">
+				<dy id="111" name="三圣口单元" >
+				    <sb id="1111" name="设备1"></sb>
+					<sb id="1112" name="设备2"></sb>
+				</dy>
+				<dy id="112" name="后裔单元" >
+				    <sb id="1121" name="设备1"></sb>
+				</dy>
+			</dp>
+			<dp id="12" name="三河大棚">
+				<dy id="121" name="三河单元" >
+				    <sb id="1211" name="设备1"></sb>
+					<sb id="1212" name="设备2"></sb>
+				</dy>
+			</dp>
+			<dp id="11" name="霸州大棚" ></dp>
+			<dp id="12" name="固安大棚" ></dp>
+		</jd>
+	</data>
+</resp>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_light"
+    android:orientation="vertical"
+    tools:context="com.hxsn.ssk.activity.AboutUsActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/in_title"
+        layout="@layout/in_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dip" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="庄络“随时看” "
+        android:textColor="@color/green_none"
+        android:textSize="23sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="        庄络“随时看”，即GPRS型在线式气温监测仪。可以实时感知空气温度的变化，并通过GPRS网络自动将数据上传到云端的大数据云服务平台，然后利用智能手机客户端——随时看App，可随时随地查看实时监测气温数据，还可以查看气温当日变化曲线，掌握气温变化的规律，该产品还提供气温高低报警，当气温达到设置的阈值时，手机会接到报警信息，提醒您采取调温措施。"
+        android:textColor="@color/green_none"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/ssk1" />
+
+</LinearLayout>

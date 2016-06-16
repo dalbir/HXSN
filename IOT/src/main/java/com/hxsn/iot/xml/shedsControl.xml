@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>qpkz</func>
+	<data>
+	    <item sbid="1111"  status="0"></item>
+		<item sbid="1112"  status="1"></item>
+		<item sbid="1121"  status="0"></item>
+	</data>
+</resp>

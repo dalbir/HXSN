@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>jcsj</func>
+	<data>
+		<time>1410753220000</time>
+		<group name="">
+			<item name="光照" type="GZ" value="1200" normal="1" unit="lux"></item>
+			<item name="水分" type="SF" value="76" normal="1" unit="%"></item>
+			<item name="土温" type="TW" value="35" normal="1" unit="℃"></item>
+			<item name="风向" type="FX" value="北风" normal="1" unit=""></item>
+			<item name="CO2浓度" type="CO2" value="150" normal="1" unit="ppm"></item>
+			<item name="空温" type="QW" value="43" normal="0" unit="℃"></item>
+			<item name="空湿" type="QS" value="20" normal="1" unit="%"></item>
+			<item name="风速" type="FS" value="89" normal="0" unit="m/s"></item>
+			<item name="土湿" type="TS" value="64" normal="1" unit="%"></item>
+		</group>
+	</data>
+</resp>

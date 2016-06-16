@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>nshdxm</func>
+	<data>
+		<item >浇水</item>
+		<item >施肥</item>
+	</data>
+</resp>

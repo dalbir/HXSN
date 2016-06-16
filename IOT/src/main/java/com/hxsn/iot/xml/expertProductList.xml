@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resp>
+	<code>200</code>
+	<func>ncplb</func>
+	<data>
+		<item id="1">蔬菜</item>
+		<item id="2">瓜果</item>
+		<item id="3">大田</item>
+		<item id="4">林果</item>
+		<item id="5">畜牧</item>
+		<item id="6">水产</item>
+		<item id="7">农机</item>
+	</data>
+</resp>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="9" android:drawable="@drawable/login_wrong" />
+    <item android:maxLevel="39" android:drawable="@drawable/login_right" />
+    <item android:maxLevel="49" android:drawable="@drawable/login_sj" />
+</level-list>

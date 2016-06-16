@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:\Program\Android\Android_Studio\gradle\gradle-2.8" />
+        <option name="gradleJvm" value="1.7" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/FarmManage" />
+            <option value="$PROJECT_DIR$/HandFarm" />
+            <option value="$PROJECT_DIR$/IOT" />
+            <option value="$PROJECT_DIR$/intelliwork" />
+            <option value="$PROJECT_DIR$/sn-ssk-v0.1" />
+            <option value="$PROJECT_DIR$/town" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

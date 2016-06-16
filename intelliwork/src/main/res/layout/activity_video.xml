@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FrameLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <SurfaceView
+        android:id="@+id/video_surfaceView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+  <RelativeLayout
+      android:id="@+id/onLineViewRL"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:visibility="invisible"
+      >
+      <ImageButton
+          android:id="@+id/online_video_up"
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:background="@color/transparent"
+          android:src="@drawable/video_up" />
+      
+      <ImageButton
+          android:id="@+id/online_video_down"
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:layout_alignParentBottom="true"
+             android:background="@color/transparent"
+          android:layout_centerHorizontal="true"
+          android:src="@drawable/video_down" />
+
+      <ImageButton
+          android:id="@+id/online_video_left"
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:layout_alignParentLeft="true"
+             android:background="@color/transparent"
+          android:layout_centerVertical="true"
+          android:src="@drawable/video_left" />
+      
+      <ImageButton
+          android:id="@+id/online_video_right"
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:layout_alignParentRight="true"
+             android:background="@color/transparent"
+          android:layout_centerVertical="true"
+          android:src="@drawable/video_right" /> 
+          
+       <ImageButton android:id="@+id/online_video_small" 
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+          android:layout_alignParentBottom="true"
+          android:background="@color/transparent"
+          android:layout_alignParentLeft="true"
+          android:src="@drawable/video_big" 
+          android:layout_marginLeft="10dp"
+          android:layout_marginBottom="5dp"/>
+      
+      <ImageButton
+          android:id="@+id/online_video_big"
+          android:layout_width="60dp"
+          android:layout_height="50dp"
+             android:background="@color/transparent"
+          android:layout_alignParentBottom="true"
+          android:layout_toLeftOf="@id/online_video_down"
+    		android:layout_marginRight="120dp"
+    		android:layout_marginBottom="5dp"
+          android:src="@drawable/video_small" />
+
+  </RelativeLayout>
+    <ImageView
+        android:id="@+id/jiatu"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/jiatu"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/shipin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/danbing"
+        android:padding="5dp"
+        android:layout_gravity="right" />
+    
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="20dp" >
+
+        <Button
+            android:id="@+id/videoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone"
+            android:background="@drawable/btn_back" />
+
+        <ImageView
+            android:id="@+id/duijiangIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/microphone_0" />
+
+    </RelativeLayout>
+
+</FrameLayout>
